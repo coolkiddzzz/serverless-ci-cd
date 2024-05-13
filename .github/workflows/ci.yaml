@@ -67,7 +67,8 @@ jobs:
   deploy-image-dev:
     needs: [build-and-scan-image]
     name: "Deployed image to dev"
-    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@main
+    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@master
+
     with:
         target_env: "dev"
     secrets: inherit
@@ -76,7 +77,7 @@ jobs:
   deploy-image-uat:
     needs: [build-and-scan-image]
     name: "Deployed image to uat"
-    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@main
+    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@master
     with:
         target_env: "uat"
     secrets: inherit
@@ -85,7 +86,7 @@ jobs:
   deploy-image-prod:
     needs: [build-and-scan-image, deploy-image-uat]
     name: "Deployed image to prod"
-    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@main
+    uses: coolkiddzzz/serverless-ci-cd/.github/workflows/cd.yaml@master
     with:
         target_env: "prod"
     secrets: inherit
