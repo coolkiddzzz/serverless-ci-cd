@@ -17,6 +17,10 @@
   },
   "homepage": "https://github.com/coolkiddzzz/serverless-ci-cd#readme",
   "devDependencies": {
-    "jest": "^29.7.0"
+    "jest": "^29.7.0",
+    "supertest": "^7.0.0"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
   }
 }
